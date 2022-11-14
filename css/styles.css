@@ -688,6 +688,64 @@ img {
 .socials-icon-footer {
   fill: currentColor;
 }
+/* підпишіться на розсилку */
+
+.sign-up {
+  margin-left: 93px;
+}
+.sign-up-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--backround-color);
+  margin: 0;
+}
+.sign-up-with-btn {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.sign-up-input {
+  width: 358px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.input-container {
+  display: flex;
+  position: relative;
+}
+
+.form-label {
+  display: block;
+  width: 358px;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.sign-up-button {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: var(--accent-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  color: var(--backround-color);
+  border: none;
+  padding: 10px 28px;
+  width: 200px;
+  height: 50px;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0 0 0 / 15%);
+  border-radius: 4px;
+}
 
 /* --portfolio-- */
 
