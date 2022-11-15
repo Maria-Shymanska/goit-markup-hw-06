@@ -544,7 +544,7 @@ img {
   border-radius: 50%;
 
   transition: color 250ms var(--animation-timing-function),
-    background-color 250ms var(--accent-color);
+    background-color 250ms var(--animation-timing-function);
 }
 
 .socials-link:hover,
@@ -676,7 +676,7 @@ img {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
   color: #ffffff;
-  transition: color 250ms var(--animation-timing-function);
+  transition: background-color 250ms var(--animation-timing-function);
 }
 
 .socials-link-item:hover,
