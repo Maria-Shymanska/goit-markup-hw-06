@@ -472,13 +472,13 @@ input:focus-visible {
   color: #2196f3;
 }
 
-.form-checkbox-icon {
+.checkbox-icon {
   margin-left: 12px;
   margin-right: 7px;
   background-color: #2196f3;
   border: 2px solid var(--accent-color);
   border-radius: 2px;
-  background-image: url(./images/icons.svg#icon-icon-check);
+  background-image: url(./images/icons.svg#icon-Vector);
   transition-property: background-color;
   transition-property: background-color, border-color;
   transition-duration: 250ms;
@@ -487,6 +487,11 @@ input:focus-visible {
 
 .checked {
   color: #2196f3;
+}
+
+.checkbox:checked + .form-form-checkbox-icon {
+  background-color: var(--accent-color);
+  border: none;
 }
 .form-button {
   font-weight: 700;
