@@ -12,6 +12,7 @@
   --img-portfolio-text: #eeeeee;
   --socials-icon-color: #afb1b8;
   --animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --form-border-color: rgba(33 33, 33, 0.2);
 }
 body {
   font-family: Roboto, sans-serif;
@@ -393,29 +394,35 @@ img {
   color: var(--secondary-text-color);
 }
 
-.form-field input {
-  width: 100%;
-  height: 40px;
-  margin: 0;
-  padding-left: 42px;
-  font-size: 14px;
-  outline: unset;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-}
-input:focus-visible {
-  outline: none;
-}
-
-.form-field:hover-within > .form-input,
-.form-field:focus-within > .form-input {
-  border-color: 1px solid var(--accent-color);
-  transform: var(--animation-timing-function);
+.form-field:focus-within > .form-input,
+.form-field:hover > .form-input {
+  border-color: var(--accent-color);
+  transform: var(--transition);
 }
 .form-field:focus-within > .form-icon,
 .form-field:hover > .form-icon {
   fill: var(--accent-color);
-  transform: var(--animation-timing-function);
+  transform: var(--transition);
+}
+
+.form-field input {
+  height: 40px;
+  width: 100%;
+  padding: 12px;
+  padding-left: 42px;
+  border: 1px solid var(--form-border-color);
+  border-radius: 4px;
+  outline: transparent;
+}
+
+.form-input:focus {
+  border-color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: var(--animation-timing-function);
+}
+
+input:focus-visible {
+  outline: none;
 }
 
 .form-icon {
@@ -444,12 +451,10 @@ input:focus-visible {
   transform: var(--animation-timing-function);
   border-color: var(--accent-color);
 }
-.form-aggreement {
+.form-label {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 10px;
-  margin-bottom: 30px;
 }
 
 .form-textarea {
@@ -462,8 +467,7 @@ input:focus-visible {
   letter-spacing: 0.03em;
   color: var(--socials-icon-color);
 }
-
-.checkbox-link {
+.data-comme .checkbox-link {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -472,23 +476,46 @@ input:focus-visible {
   color: #2196f3;
 }
 
-.checkbox-icon {
+.form-field-check {
+  display: flex;
+  align-items: center;
+
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+
+  color: var(--accent-color);
+}
+
+.form-field-check input[type='checkbox'] {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.form-check {
   margin-left: 12px;
   margin-right: 7px;
-  background-color: #2196f3;
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--logo-text-color);
   border-radius: 2px;
-  background-image: url(./images/icons.svg#icon-Vector);
-  transition-property: background-color;
+  background-image: url(./images/icons.svg#icon-vector);
+  transition-property: fill;
   transition-property: background-color, border-color;
   transition-duration: 250ms;
   transition-timing-function: var(--animation-timing-function);
 }
 
-.checkbox:checked + .form-checkbox-icon {
+.checkbox:checked + .form-check {
   background-color: var(--accent-color);
   border: none;
 }
+
 .form-button {
   font-weight: 700;
   font-size: 16px;
