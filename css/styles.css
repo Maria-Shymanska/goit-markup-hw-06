@@ -485,11 +485,7 @@ input:focus-visible {
   transition-timing-function: var(--animation-timing-function);
 }
 
-.checked {
-  color: #2196f3;
-}
-
-.checkbox:checked + .form-form-checkbox-icon {
+.checkbox:checked + .form-checkbox-icon {
   background-color: var(--accent-color);
   border: none;
 }
