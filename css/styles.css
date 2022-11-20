@@ -467,13 +467,16 @@ input:focus-visible {
   letter-spacing: 0.03em;
   color: var(--socials-icon-color);
 }
-.data-comme .checkbox-link {
+.checkbox-link {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration-line: underline;
   color: #2196f3;
+}
+.data-comment {
+  margin-bottom: 20px;
 }
 
 .form-field-check {
@@ -484,6 +487,7 @@ input:focus-visible {
   letter-spacing: 0.03em;
 
   color: var(--accent-color);
+  margin-bottom: 30px;
 }
 
 .form-field-check input[type='checkbox'] {
@@ -863,7 +867,7 @@ input:focus-visible {
 /* підпишіться на розсилку */
 
 .sign-up {
-  margin-left: 93px;
+  margin-left: auto;
 }
 .sign-up-with-btn {
   display: flex;
@@ -891,6 +895,8 @@ input:focus-visible {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  color: var(--secondary-text-color);
+  padding-left: 20px;
 }
 
 .input-container {
