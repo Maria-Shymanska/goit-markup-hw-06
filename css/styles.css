@@ -368,117 +368,125 @@ img {
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
+  letter-spacing: 0.03em;
   color: var(--main-text-color);
   margin-bottom: 12px;
 }
 
+.form-group {
+  margin-bottom: 20px;
+}
 .form-field {
   position: relative;
   display: flex;
   flex-direction: column;
+}
+.modal-text {
   margin-bottom: 10px;
-  transition: border-color 250ms var(--animation-timing-function);
-  text-align: start;
 }
-
-.form-input {
-  width: 100%;
-  height: 40px;
-  border: 1px solid var(--socials-icon-color);
-  border-radius: 4px;
-  outline: transparent;
-}
-
-.form-field:focus-within .form-input,
-.form-field:hover .form-input {
-  border: 1px solid var(--accent-color);
-}
-.form-field:focus-within .form-icon,
-.form-field:hover .form-icon {
-  fill: var(--accent-color);
-}
-
-.form-icon {
-  position: absolute;
-  top: 29px;
-  left: 12px;
-  display: inline-block;
-  fill: currentColor;
-  fill: var(--logo-text-color);
-  transition: transform 250ms var(--animation-timing-function);
-}
-.form-field:focus-within > .icon-person {
-  color: var(--accent-color);
-}
-
 .form-label {
   margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
+  color: var(--secondary-text-color);
 }
 
-/* .form-input {
-  padding: 11px 12px;
-  padding-left: 43px;
+.form-field input {
+  width: 100%;
+  height: 40px;
+  margin: 0;
+  padding-left: 42px;
+  font-size: 14px;
+  outline: unset;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  transition: border 250ms var(--animation-timing-function);
-} */
+}
+input:focus-visible {
+  outline: none;
+}
 
-.form-field:focus-within .form-message,
-.form-field:hover .form-message {
-  border: 1px solid var(--accent-color);
+.form-field:hover-within > .form-input,
+.form-field:focus-within > .form-input {
+  border-color: 1px solid var(--accent-color);
+  transform: var(--animation-timing-function);
 }
-.form-field textarea::placeholder {
-  color: rgba(117, 117, 117, 0.5);
+.form-field:focus-within > .form-icon,
+.form-field:hover > .form-icon {
+  fill: var(--accent-color);
+  transform: var(--animation-timing-function);
 }
+
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+}
+
+.form-massage::placeholder {
+  opacity: 1;
+}
+.form-massage:focus::placeholder {
+  opacity: 1;
+}
+.form-message {
+  height: 120px;
+  width: 100%;
+  padding: 12px 16px;
+  resize: none;
+  border-radius: 4px;
+  display: block;
+  color: var(--secondary-text-color);
+}
+.form-message:focus,
+.form-message:hover {
+  transform: var(--animation-timing-function);
+  border-color: var(--accent-color);
+}
+.form-aggreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
 .form-textarea {
   margin-bottom: 20px;
 }
-.form-message {
-  width: 448px;
-  height: 120px;
-  padding: 12px 16px;
-  resize: none;
-  transition: border 250ms var(--animation-timing-function);
-}
-.form-aggreement {
-  margin-bottom: 30px;
-  padding-right: 11px;
-  padding-left: 37px;
-}
-.check-input {
-  position: absolute;
-  appearance: none;
+.checkbox-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: var(--socials-icon-color);
 }
 
-.checkbox {
-  position: absolute;
-  bottom: 124px;
-  left: 54px;
-  width: 16px;
-  height: 15px;
-  border: 2px solid var(--logo-text-color);
-  border-radius: 1px;
-  background-color: var(--backround-color);
-}
-.check-input:checked + .checkbox {
-  border-color: var(--accent-color);
-  background-size: contain;
-  background-origin: border-box;
-  background-color: var(--accent-color);
-  background-image: url(/images/icons.svg#aggreement-text);
-}
-.aggreement-label {
+.checkbox-link {
+  font-weight: 400;
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.71;
   letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: #2196f3;
 }
-.aggreement-text {
-  text-decoration: underline;
-  color: var(--accent-color);
+
+.form-checkbox-icon {
+  margin-left: 12px;
+  margin-right: 7px;
+  background-color: #2196f3;
+  border: 2px solid var(--accent-color);
+  border-radius: 2px;
+  background-image: url(./images/icons.svg#icon-icon-check);
+  transition-property: background-color;
+  transition-property: background-color, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--animation-timing-function);
+}
+
+.checked {
+  color: #2196f3;
 }
 .form-button {
   font-weight: 700;
