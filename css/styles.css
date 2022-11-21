@@ -309,6 +309,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: fill 250ms var(--animation-timing-function);
 }
 .backdrop.is-hidden .modal {
   transform: scale(0.5);
@@ -316,7 +317,7 @@ img {
 
 .icon-close-black:hover,
 .icon-close-black:focus {
-  color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .jumpin-button {
@@ -394,15 +395,9 @@ img {
   color: var(--secondary-text-color);
 }
 
-.form-field:focus-within > .form-input,
-.form-field:hover > .form-input {
-  border-color: var(--accent-color);
-  transform: var(--animation-timing-function);
-}
 .form-field:focus-within > .form-icon,
 .form-field:hover > .form-icon {
   fill: var(--accent-color);
-  transform: var(--animation-timing-function);
 }
 
 .form-field input {
@@ -413,6 +408,12 @@ img {
   border: 1px solid var(--form-border-color);
   border-radius: 4px;
   outline: transparent;
+  transition: border-color 250ms var(--animation-timing-function);
+}
+
+.form-field input:hover,
+.form-field input:focus {
+  border-color: var(--accent-color);
 }
 
 .form-input:focus-within .form-icon,
@@ -431,6 +432,7 @@ input:focus-visible {
   position: absolute;
   top: 50%;
   left: 12px;
+  transition: fill 250ms var(--animation-timing-function);
 }
 
 .form-massage::placeholder {
@@ -447,10 +449,10 @@ input:focus-visible {
   border-radius: 4px;
   display: block;
   color: var(--secondary-text-color);
+  animation: border-color 250ms var(--animation-timing-function);
 }
 .form-message:focus,
 .form-message:hover {
-  transform: var(--animation-timing-function);
   border-color: var(--accent-color);
 }
 .form-label {
@@ -508,10 +510,8 @@ input:focus-visible {
 .form-check {
   margin-left: 12px;
   margin-right: 7px;
-  border: 2px solid var(--logo-text-color);
-  border-radius: 2px;
-  background-image: url(./images/icons.svg#icon-vector);
-  transition-property: fill;
+  border: 2px solid var(--logo-color);
+  background-image: url(./images/icons.svg#icon-icon-check);
   transition-property: background-color, border-color;
   transition-duration: 250ms;
   transition-timing-function: var(--animation-timing-function);
@@ -974,7 +974,7 @@ input:focus-visible {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 63px 24px;
+  /* padding: 63px 24px; */
   z-index: 10;
 
   transform: translateY(101%);
