@@ -397,12 +397,12 @@ img {
 .form-field:focus-within > .form-input,
 .form-field:hover > .form-input {
   border-color: var(--accent-color);
-  transform: var(--transition);
+  transform: var(--animation-timing-function);
 }
 .form-field:focus-within > .form-icon,
 .form-field:hover > .form-icon {
   fill: var(--accent-color);
-  transform: var(--transition);
+  transform: var(--animation-timing-function);
 }
 
 .form-field input {
@@ -415,8 +415,10 @@ img {
   outline: transparent;
 }
 
-.form-input:focus {
-  border-color: var(--accent-color);
+.form-input:focus-within .form-icon,
+.form-input:hover {
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
   transition-duration: 250ms;
   transition-timing-function: var(--animation-timing-function);
 }
