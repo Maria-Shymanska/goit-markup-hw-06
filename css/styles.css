@@ -482,43 +482,30 @@ input:focus-visible {
   margin-bottom: 20px;
 }
 
-.form-field-check {
+.form-agreement {
   display: flex;
   align-items: center;
-
-  line-height: calc(24 / 14);
-  letter-spacing: 0.03em;
-
-  color: var(--accent-color);
+  justify-content: center;
+  gap: 10px;
   margin-bottom: 30px;
 }
 
-.form-field-check input[type='checkbox'] {
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+.form-checkbox-icon .unchecked {
+  opacity: 1;
+  transition: var(--animation-timing-function);
 }
 
-.form-check {
-  margin-left: 12px;
-  margin-right: 7px;
-  border: 2px solid var(--logo-color);
-  background-image: url(./images/icons.svg#icon-icon-check);
-  transition-property: background-color, border-color;
-  transition-duration: 250ms;
-  transition-timing-function: var(--animation-timing-function);
+.form-checkbox:checked + .form-checkbox-icon .unchecked {
+  opacity: 0;
 }
 
-.checkbox:checked + .form-check {
-  background-color: var(--accent-color);
-  border: none;
+.form-checkbox-icon .checked {
+  opacity: 0;
+  transition: var(--animation-timing-function);
+}
+
+.form-checkbox:checked + .form-checkbox-icon .checked {
+  opacity: 1;
 }
 
 .form-button {
