@@ -460,9 +460,6 @@ input:focus-visible {
   gap: 10px;
 }
 
-.form-textarea {
-  margin-bottom: 20px;
-}
 .checkbox-text {
   font-weight: 400;
   font-size: 14px;
