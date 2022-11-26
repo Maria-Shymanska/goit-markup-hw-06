@@ -332,6 +332,7 @@ img {
 
 .form-label {
   margin-bottom: 4px;
+  color: var(--secondary-text-color);
 }
 
 .form-input {
