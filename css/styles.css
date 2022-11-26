@@ -333,6 +333,7 @@ img {
 .form-label {
   margin-bottom: 4px;
   color: var(--secondary-text-color);
+  display: flex;
 }
 
 .form-input {
@@ -372,7 +373,7 @@ img {
 .agreement-form {
   margin-bottom: 30px;
   padding-right: 11px;
-  padding-left: 37px;
+  padding-left: 70;
 }
 
 .check-input {
